@@ -5,6 +5,8 @@ LABEL maintainer="Craig Citro <craigcitro@google.com>"
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
+        git \
+        wget \
         curl \
         libfreetype6-dev \
         libpng12-dev \
