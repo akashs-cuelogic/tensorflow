@@ -68,7 +68,7 @@ EXPOSE 6006
 # IPython
 EXPOSE 8888
 
-WORKDIR "/notebooks"
+#WORKDIR "/notebooks"
 
 # Clone DL-Course source
 RUN git clone -q https://github.com/milinddeore/DL-Course.git dl-courses
