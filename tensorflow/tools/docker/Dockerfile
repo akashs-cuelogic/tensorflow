@@ -49,6 +49,9 @@ RUN pip --no-cache-dir install \
 
 # RUN ln -s /usr/bin/python3 /usr/bin/python#
 
+# Install Keras
+RUN pip install keras
+
 # Set up our notebook config.
 COPY jupyter_notebook_config.py /root/.jupyter/
 
@@ -66,5 +69,9 @@ EXPOSE 6006
 EXPOSE 8888
 
 WORKDIR "/notebooks"
+
+# Clone DL-Course source
+RUN git clone -q https://github.com/milinddeore/DL-Course.git dl-courses
+WORKDIR /home/$USERNAME/dl-courses/
 
 CMD ["/run_jupyter.sh", "--allow-root"]
