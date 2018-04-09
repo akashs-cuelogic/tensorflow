@@ -77,4 +77,4 @@ RUN git clone -q https://github.com/milinddeore/DL-Course.git dl-courses
 WORKDIR /dl-courses/
 
 #CMD ["/run_jupyter.sh", "--allow-root"]
-CMD jupyter notebook --ip=0.0.0.0 --port=8008
+CMD jupyter notebook --ip=0.0.0.0 --port=8008 --allow-root
