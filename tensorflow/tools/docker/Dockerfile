@@ -68,12 +68,12 @@ COPY run_jupyter.sh /
 # TensorBoard
 EXPOSE 6006
 # IPython
-EXPOSE 8888
+EXPOSE 8008
 
 #WORKDIR "/notebooks"
 
 # Clone DL-Course source
 RUN git clone -q https://github.com/milinddeore/DL-Course.git dl-courses
-WORKDIR /home/$USERNAME/dl-courses/
+WORKDIR /dl-courses/
 
 CMD ["/run_jupyter.sh", "--allow-root"]
