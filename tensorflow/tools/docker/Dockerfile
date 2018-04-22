@@ -73,7 +73,7 @@ EXPOSE 8008
 #WORKDIR "/notebooks"
 
 # Clone DL-Course source
-RUN git clone -q https://github.com/milinddeore/DL-Course.git dl-courses
+RUN git clone -q https://github.com/akashs-cuelogic/DL-Course.git dl-courses
 WORKDIR /dl-courses/
 
 #CMD ["/run_jupyter.sh", "--allow-root"]
